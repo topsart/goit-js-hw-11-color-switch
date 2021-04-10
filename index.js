@@ -3,14 +3,7 @@ const stopButtonRef = document.querySelector('button[data-action=stop]');
 const bodyRef = document.querySelector('body');
 let timer = null;
 
-const colors = [
-  '#FFFFFF',
-  '#2196F3',
-  '#4CAF50',
-  '#FF9800',
-  '#009688',
-  '#795548',
-];
+const colors = ['#2196F3', '#4CAF50', '#FF9800', '#009688', '#795548'];
 
 const randomIntegerFromInterval = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
@@ -26,7 +19,7 @@ startButtonRef.addEventListener('click', ({ target }) => {
 });
 
 stopButtonRef.addEventListener('click', () => {
-  bodyRef.bgColor = '';
+  // bodyRef.bgColor = '';
   clearInterval(timer);
   startButtonRef.disabled = false;
 });
